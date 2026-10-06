@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music World</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section id="homeScreen" class="screen active home">
+    <div class="vinyl">
+        <div class="vinyl-label"></div>
+    </div>
+
+    <div class="home-content">
+        <div class="eyebrow">WELCOME</div>
+
+        <h1>
+            TO THE<br>
+            WORLD<br>
+            WHERE<br>
+            EVERY<br>
+            BEAT<br>
+            TELLS A<br>
+            STORY
+        </h1>
+
+        <p>you can choose music of your taste</p>
+
+        <button id="enterButton">
+            ENTER EXPERIENCE →
+        </button>
+    </div>
+</section>
+
+
+<section id="artistScreen" class="screen">
+    <div class="selection-page">
+
+        <div class="eyebrow">STEP 01</div>
+        <h2>Choose your artists</h2>
+        <p>Choose up to 10 artists</p>
+
+        <div id="artistGrid" class="grid"></div>
+
+        <button id="artistContinue" class="main-button">
+            CONTINUE →
+        </button>
+    </div>
+</section>
+
+
+<section id="moodScreen" class="screen">
+    <div class="selection-page">
+
+        <div class="eyebrow">STEP 02</div>
+        <h2>Choose your music taste</h2>
+        <p>Choose up to 5 moods</p>
+
+        <div id="moodGrid" class="grid"></div>
+
+        <button id="moodContinue" class="main-button">
+            ENTER MUSIC WORLD →
+        </button>
+    </div>
+</section>
+
+
+<section id="musicScreen" class="screen music-page">
+
+    <header>
+        <div class="eyebrow">YOUR MUSIC WORLD</div>
+        <h2>Music World 🎧</h2>
+        <p>Choose any song or play an entire playlist.</p>
+    </header>
+
+    <div id="playlistContainer"></div>
+
+</section>
+
+
+<div id="playerBar">
+
+    <div id="youtubePlayer"></div>
+
+    <div class="player-info">
+
+        <div class="current-song">
+            <small>NOW PLAYING</small>
+            <strong id="nowPlayingTitle">Choose a song</strong>
+            <span id="nowPlayingArtist">—</span>
+        </div>
+
+        <div class="controls">
+            <button id="previousBtn">⏮</button>
+            <button id="playPauseBtn">▶</button>
+            <button id="nextBtn">⏭</button>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<meta name="description" content="Music World is a music discovery website where you can explore playlists based on your mood, activity and music taste.">

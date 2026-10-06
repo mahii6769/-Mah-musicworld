@@ -1,0 +1,377 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #06040b;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.screen {
+    display: none;
+    min-height: 100vh;
+}
+
+.screen.active {
+    display: block;
+}
+
+
+/* HOME */
+
+.home {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 80% 10%, #45208055, transparent 30%),
+        radial-gradient(circle at 10% 70%, #4b28a833, transparent 30%),
+        #06040b;
+}
+
+.home.active {
+    display: flex;
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 45px 24px;
+}
+
+.eyebrow {
+    color: #b995ff;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.home h1 {
+    font-size: clamp(48px, 15vw, 90px);
+    line-height: .83;
+    letter-spacing: -4px;
+    background: linear-gradient(
+        135deg,
+        white,
+        #d5baff,
+        #914cff,
+        #ff72d2
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.home p {
+    margin-top: 30px;
+    color: #d5c9e8;
+    font-size: 14px;
+}
+
+#enterButton,
+.main-button {
+    margin-top: 24px;
+    width: 100%;
+    padding: 17px;
+    border-radius: 40px;
+    border: 1px solid #a65cff;
+    background: #0c0812;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 0 22px #9b4cff55;
+}
+
+.vinyl {
+    position: absolute;
+    right: -65px;
+    top: 25px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background:
+        repeating-radial-gradient(
+            circle,
+            #17131d 0px,
+            #17131d 5px,
+            #07060a 6px,
+            #07060a 10px
+        );
+    box-shadow: 0 0 45px #b44cff55;
+}
+
+.vinyl-label {
+    position: absolute;
+    left: 62px;
+    top: 62px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff65cf, #8042ff);
+    border: 7px solid #111;
+}
+
+
+/* SELECTION */
+
+.selection-page {
+    min-height: 100vh;
+    padding: 35px 17px 190px;
+    background:
+        radial-gradient(circle at 50% 0%, #7b3dd833, transparent 35%),
+        #08060f;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.selection-page h2,
+.music-page h2 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.selection-page > p {
+    color: #958da2;
+    margin-bottom: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.choice {
+    padding: 15px 8px;
+    border: 1px solid #292131;
+    border-radius: 14px;
+    background: #110d18;
+    color: #eee7f7;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.choice.selected {
+    background: linear-gradient(135deg, #7133ce, #b347b1);
+    border-color: #d08cff;
+    box-shadow: 0 0 18px #a34cff55;
+}
+
+
+/* MUSIC PAGE */
+
+.music-page {
+    padding: 30px 15px 210px;
+    background:
+        radial-gradient(circle at 90% 0%, #7d32d833, transparent 25%),
+        #07050d;
+}
+
+.music-page header {
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.music-page header p:last-child {
+    color: #93899e;
+}
+
+
+/* PLAYLIST */
+
+.playlist {
+    max-width: 900px;
+    margin: 0 auto 25px;
+    padding: 18px;
+    border-radius: 20px;
+    border: 1px solid #2b2134;
+    background: #100c17;
+}
+
+.playlist-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.playlist-head h3 {
+    font-size: 20px;
+}
+
+.playlist-head span {
+    display: block;
+    margin-top: 5px;
+    color: #817789;
+    font-size: 11px;
+}
+
+.play-all {
+    padding: 9px 13px;
+    border-radius: 20px;
+    border: 1px solid #9857ff;
+    background: #180d25;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.song {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 5px;
+    border-top: 1px solid #211927;
+    cursor: pointer;
+}
+
+.song:hover {
+    background: #9b4cff0d;
+}
+
+.number {
+    width: 24px;
+    color: #756b80;
+    font-size: 12px;
+    text-align: center;
+}
+
+.song-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.song-details strong {
+    display: block;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-details span {
+    display: block;
+    color: #887e91;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.song-play {
+    color: #c37cff;
+}
+
+
+/* PLAYER */
+
+#playerBar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    padding: 10px;
+    background: #09060ef7;
+    border-top: 1px solid #382441;
+    box-shadow: 0 -10px 35px #00000099;
+}
+
+#youtubePlayer {
+    width: 100%;
+    max-width: 500px;
+    height: 120px;
+    margin: auto;
+}
+
+#youtubePlayer iframe {
+    width: 100% !important;
+    height: 120px !important;
+    border-radius: 12px;
+}
+
+.player-info {
+    max-width: 900px;
+    margin: 7px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.current-song {
+    min-width: 0;
+}
+
+.current-song small {
+    display: block;
+    color: #9b63e9;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.current-song strong {
+    display: block;
+    margin-top: 4px;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.current-song span {
+    display: block;
+    color: #887e91;
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+.controls {
+    display: flex;
+    gap: 7px;
+}
+
+.controls button {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid #493257;
+    background: #17101e;
+    color: white;
+    cursor: pointer;
+}
+
+#playPauseBtn {
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: linear-gradient(135deg, #863fff, #c449b7);
+}
+
+
+@media (min-width: 700px) {
+
+    .home-content {
+        padding-left: 8%;
+        padding-top: 7%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #youtubePlayer,
+    #youtubePlayer iframe {
+        height: 170px !important;
+    }
+}
